@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_splash_main"
+    tools:context=".activities.LoginActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Enter 6 Digit OTP Sent On Your Mobile.."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinview"
+            app:itemCount="6"
+            app:itemWidth="50dp"
+            app:itemHeight="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:itemBackground="@color/white"
+            android:layout_gravity="center"
+            android:inputType="number"
+            android:cursorVisible="true"
+            app:hideLineWhenFilled="false"
+            app:itemRadius="10dp"
+            style="@style/PinWidget.PinView"/>
+
+
+
+        <RelativeLayout
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/timerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/otp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/clock" />
+
+                <TextView
+                    android:id="@+id/otp_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Resend"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/btn_verify"
+            android:layout_width="100dp"
+
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-black"
+                android:text="Verify"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
